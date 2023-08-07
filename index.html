@@ -152,7 +152,11 @@
                         </div>
 
                         <div class="item">
-                          <div class="sp-subtitle">Web Developer</div>
+                          <div class="sp-subtitle">Relationship Expert</div>
+                        </div>
+
+                        <div class="item">
+                          <div class="sp-subtitle">Personal Finance Mentor</div>
                         </div>
                       </div>
                     </div>
@@ -190,7 +194,7 @@
                       <ul>
                         <li>
                           <span class="title">Age</span>
-                          <span class="value">30</span>
+                          <span class="value age">30</span>
                         </li>
 
                         <li>
@@ -1159,5 +1163,13 @@
     <script src="js/jquery.googlemap.js"></script>
     <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      const birthDate = new Date('1993-01-26');
+      const ageInMilliseconds = Date.now() - birthDate.getTime();
+      const ageDate = new Date(ageInMilliseconds);
+      const age = Math.abs(ageDate.getUTCFullYear() - 1970);
+      const ageElement = document.querySelector('.value.age');
+      ageElement.textContent = age;
+    </script>
   </body>
 </html>
