@@ -2422,8 +2422,9 @@ blockquote {
 
   #profile-photo {
     display: block;
-    max-width: 180px;
-    margin-bottom: 30px;
+    max-width: 250px;
+    width: 250px;
+    margin-bottom: 40px;
   }
 
   .mobile-menu-hide {
