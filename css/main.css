@@ -455,6 +455,10 @@ input[type='submit']:focus {
   z-index: -1;
 }
 
+#profile-photo {
+  display: none;
+}
+
 .header-titles h2 {
   font-size: 36px;
   font-weight: 600;
@@ -2414,6 +2418,12 @@ blockquote {
   .header-photo {
     max-width: 130px;
     margin-bottom: 25px;
+  }
+
+  #profile-photo {
+    display: block;
+    max-width: 180px;
+    margin-bottom: 30px;
   }
 
   .mobile-menu-hide {
