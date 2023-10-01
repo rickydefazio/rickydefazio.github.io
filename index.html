@@ -731,13 +731,5 @@
 
     <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
-    <script>
-      const birthDate = new Date('1993-01-26');
-      const ageInMilliseconds = Date.now() - birthDate.getTime();
-      const ageDate = new Date(ageInMilliseconds);
-      const age = Math.abs(ageDate.getUTCFullYear() - 1970);
-      const ageElement = document.querySelector('.value.age');
-      ageElement.textContent = age;
-    </script>
   </body>
 </html>
