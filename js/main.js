@@ -188,12 +188,15 @@
     });
 
     // Testimonials Slider
+    // Note: autoHeight is intentionally disabled. Owl Carousel v2.2.0's
+    // autoHeight sizes .owl-stage-outer to the FIRST active item's height,
+    // which clips taller sibling items when items > 1. Leaving it off lets
+    // stage-outer size naturally to the tallest visible testimonial.
     $('.testimonials.owl-carousel').owlCarousel({
       nav: true, // Show next/prev buttons.
       items: 3, // The number of items you want to see on the screen.
       loop: false, // Infinity loop. Duplicate last and first items to get loop illusion.
       navText: false,
-      autoHeight: true,
       margin: 25,
       responsive: {
         // breakpoint from 0 up
