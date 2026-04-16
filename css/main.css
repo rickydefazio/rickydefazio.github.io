@@ -615,6 +615,23 @@ input[type='submit']:focus {
 }
 
 /* --- Custom ScrollBar Customization --- */
+/*
+ * perfect-scrollbar's own CSS gates `position: absolute` on the rails with
+ * `.ps > .ps__scrollbar-y-rail`. The animated-section transition resets the
+ * section's className to its originalClassList snapshot, which can drop the
+ * `.ps` class that perfect-scrollbar adds dynamically. When that happens the
+ * rails fall back to `position: static; display: block` and stack at the
+ * bottom of the section, inflating its scrollHeight by the rail height and
+ * producing a large empty scroll region. Forcing rails to always be absolute
+ * and hidden-by-default keeps them purely as overlays regardless of the
+ * parent's class state.
+ */
+.ps__scrollbar-x-rail,
+.ps__scrollbar-y-rail {
+  position: absolute;
+  display: none;
+}
+
 .ps > .ps__scrollbar-y-rail {
   margin-right: 10px;
   margin-top: 30px;

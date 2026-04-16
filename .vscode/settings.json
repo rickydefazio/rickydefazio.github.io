@@ -1,0 +1,9 @@
+{
+  "liveServer.settings.ignoreFiles": [
+    ".vscode/**",
+    "**/.cursor/**",
+    "**/*.log",
+    "**/node_modules/**",
+    ".git/**"
+  ]
+}
